@@ -11,6 +11,7 @@ alias gd='git diff'
 alias gal='git add .'
 alias gsh='git push'
 alias gcane='git commit --amend --no-edit'
+alias gls='git log --stat'
 
 # system
 alias clc='history -p \!\! | xsel -ib'
