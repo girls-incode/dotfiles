@@ -20,6 +20,10 @@ alias clc='history -p \!\! | xsel -ib'
 alias yi='yarn install'
 alias ys='yarn start'
 
+# npm
+alias npi='npm install'
+alias nps='npm start'
+
 # rails
 alias bi='bundle install'
 alias dbm='bundle exec rake db:migrate'
