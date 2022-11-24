@@ -23,6 +23,7 @@ alias ys='yarn start'
 # npm
 alias npi='npm install'
 alias nps='npm start'
+alias fclean='rm -rf node_modules && rm -rf dist'
 
 # rails
 alias bi='bundle install'
@@ -40,9 +41,13 @@ alias rkpme='rake posts:migrate_events["false"]'
 alias rkpmh='rake posts:migrate_happenings["false"]'
 
 # code quality
-alias pwrk='packwerk update-deprecations'
-alias srb='bundle exec srb'
 alias rbc='rubocop-changes'
+alias rbca='rubocop -a components/enps'
+alias pwrk='packwerk update-deprecations components/enps'
+alias srb='bundle exec srb tc components/enps'
+alias ptt='npx prettier --write src/modules/enps'
+alias ftest='BABEL_ENV=test NODE_PATH=src npx jest --collectCoverage=false src/modules/enps'
 
 # factorial
 alias fus='factorial urls'
+alias breset='bundle exec rake db:do_reset db:migrate data:migrate db:seeds:e2e db:dump'
