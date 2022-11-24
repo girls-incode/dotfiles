@@ -20,6 +20,7 @@ alias clc='history -p \!\! | xsel -ib'
 alias npi='npm install'
 alias nps='npm start'
 alias fclean='rm -rf node_modules && rm -rf dist'
+alias flint='./frontend/node_modules/.bin/eslint $(git diff --cached --name-only | grep -E "\.(ts|tsx)$" | xargs)'
 alias finit='fclean && npi && nps'
 
 # backend
