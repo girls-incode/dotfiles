@@ -36,9 +36,7 @@ alias binit='bi && dbm && dtm && rss'
 
 # rails migration
 alias rktp='rake --tasks posts'
-alias rkpma='rake posts:migrate_announcements["false"]'
-alias rkpme='rake posts:migrate_events["false"]'
-alias rkpmh='rake posts:migrate_happenings["false"]'
+alias rkpm='bundle exec rake posts:migrate_happenings_by_companies[false,1] && bundle exec rake posts:migrate_announcements_by_companies[false,1] && bundle exec rake posts:migrate_events_by_companies[false,1]'
 
 # code quality
 alias rbc='rubocop-changes'
