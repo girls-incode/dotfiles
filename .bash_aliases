@@ -48,4 +48,4 @@ alias ftest='BABEL_ENV=test NODE_PATH=src npx jest --collectCoverage=false src/m
 
 # app
 alias fus='factorial urls'
-alias ainit='binit && finit'
+alias ainit='cd backend && binit && cd ../frontend && finit'
