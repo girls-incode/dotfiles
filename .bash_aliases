@@ -17,11 +17,9 @@ alias gls='git log --stat'
 alias clc='history -p \!\! | xsel -ib'
 
 # frontend
-alias npi='npm install'
-alias nps='npm start'
 alias fclean='rm -rf node_modules && rm -rf dist'
 alias flint='./frontend/node_modules/.bin/eslint $(git diff --cached --name-only | grep -E "\.(ts|tsx)$" | xargs)'
-alias finit='fclean && npi && nps'
+alias finit='pnpm gamma && pnpm start'
 
 # backend
 alias bi='bundle install'
@@ -32,7 +30,7 @@ alias dbmd='bin/rails db:migrate RAILS_ENV=development'
 alias rmpid='rm -f /workspace/factorial/backend/tmp/pids/server.pid'
 alias rss='bin/rails s -p 3000 -b 0.0.0.0'
 alias breset='bundle exec rake db:do_reset db:migrate data:migrate db:seeds:e2e db:dump'
-alias binit='bi && dbm && dtm && rss'
+alias binit='bi && dbmd && dtmd && rss'
 
 # rails migration
 alias rktp='rake --tasks posts'
