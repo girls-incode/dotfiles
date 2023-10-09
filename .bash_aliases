@@ -30,7 +30,7 @@ alias dbmd='bin/rails db:migrate RAILS_ENV=development'
 alias rmpid='rm -f /workspace/factorial/backend/tmp/pids/server.pid'
 alias rss='bin/rails s -p 3000 -b 0.0.0.0'
 alias breset='bundle exec rake db:do_reset db:migrate data:migrate db:seeds:e2e db:dump'
-alias binit='cd backend/ && dbmd && cd ../ && make backend.run'
+alias binit='cd backend/ && bundle install && dbmd && dtmd && cd ../ && make backend.run'
 
 # rails migration
 alias rktp='rake --tasks posts'
